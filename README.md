@@ -8,7 +8,7 @@
 
 ## Installation & Setup
 
-To run AmrProfiler locally, you must first download the required databases and files from [Zenodo](#) ([replace with actual link](https://zenodo.org/uploads/14924034)). Extract the downloaded folders inside the `amrprofiler` directory.
+To run AmrProfiler locally, you must first download the required databases and files from Zenodo (https://zenodo.org/uploads/14924034). Extract the downloaded folders inside the `amrprofiler` directory.
 
 ## Running AmrProfiler
 

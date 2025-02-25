@@ -2,7 +2,7 @@
 
 **AmrProfiler** is a bioinformatics tool designed to identify antimicrobial resistance (AMR) genes, detect point mutations in core genes, and analyze mutations in rRNA genes across 18,000 bacterial species.
 
-![Uploading AmrProfiler.png…]()
+![AmrProfiler_new](https://github.com/user-attachments/assets/8336ab4a-afe6-4fc4-b49d-68a4daf528ed)
 
 
 ## Installation & Setup

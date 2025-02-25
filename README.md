@@ -1,6 +1,8 @@
 # AmrProfiler
 
 **AmrProfiler** is a bioinformatics tool designed to identify antimicrobial resistance (AMR) genes, detect point mutations in core genes, and analyze mutations in rRNA genes across 18,000 bacterial species.
+![Uploading AmrProfiler.png…]()
+
 
 ## Installation & Setup
 
@@ -108,15 +110,18 @@ rRNA_dif = rRNA_genes_finder_NEW.find_rRNA_differences(species, df5, blast_resul
 rRNA_dif.to_csv("mutations_rRNA_results.csv", index=False, float_format="%.6f")
 ```
 
-## Output Files
+## Citations
 
-- **blast\_results.csv**: Raw BLAST results from AMR gene search
-- **final\_results\_tool1.csv**: Processed AMR gene analysis results
-- **core\_genes\_of\_this\_species.csv**: Core genes reference for the species
-- **blast\_results\_core.csv**: BLAST results for core genes
-- **mutations\_results.csv**: Mutations detected in core genes
-- **rRNA\_genes\_of\_this\_species.csv**: Reference rRNA genes for the species
-- **mutations\_rRNA\_results.csv**: Mutations detected in rRNA genes
+If you have utilized as reference databases the database **ResFinder+ReferenceGeneCatalog**, please cite:
+
+- **ResFinder**: [Zankari et al., 2012](https://doi.org/10.1093/jac/dks261)
+- **AMRFinderPlus**: [Feldgarden et al., 2019](https://doi.org/10.1128/AAC.00483-19)
+
+If you have used **ResFinder+ReferenceGeneCatalog+CARD** or **Tool 2 and/or Tool 3**, please cite:
+
+- **CARD**: [Jia et al., 2017](https://doi.org/10.1093/nar/gkw1004)
+- **ResFinder**: [Zankari et al., 2012](https://doi.org/10.1093/jac/dks261)
+- **AMRFinderPlus**: [Feldgarden et al., 2019](https://doi.org/10.1128/AAC.00483-19)
 
 ## Dependencies
 
@@ -126,6 +131,8 @@ rRNA_dif.to_csv("mutations_rRNA_results.csv", index=False, float_format="%.6f")
 - Biopython
 
 ## License
+
+This project is licensed under the MIT License, which permits free use, modification, and distribution, as long as the original copyright and license notice are included. It comes with no warranty or liability.
 
 This project is licensed under the MIT License.
 

@@ -26,8 +26,8 @@ Database_of_Genes = "Resfinder+ReferenceGeneCatalog" #auto einai pou tha dinei o
 if Database_of_Genes == "Resfinder+ReferenceGeneCatalog":
     db_path = "/home/argis/Desktop/pasteur/amr_server/AmrProfiler_new/databases/all/amrFinder_ResFinder"
 elif Database_of_Genes == "Resfinder+ReferenceGeneCatalog+Card":  # Replace with the correct alternative condition
-    db_path = "/home/argis/Desktop/pasteur/amr_server/AmrProfiler_new/databases/all/all_amr"
-#db_path = "/home/argis/Desktop/pasteur/amr_server/AmrProfiler_new/databases/all/all_amr"
+    db_path = "/home/argis/Desktop/pasteur/amr_server/AmrProfiler_new/databases/all/nr_all_amr"
+#db_path = "/home/argis/Desktop/pasteur/amr_server/AmrProfiler_new/databases/all/nr_all_amr"
 num_threads = 4
 protein_annotation_file="/home/argis/Desktop/pasteur/amr_server/AmrProfiler_new/databases/genes_annotation_databases.csv"
 protein_start_filter = 50 # Threshold for protein start position filter.

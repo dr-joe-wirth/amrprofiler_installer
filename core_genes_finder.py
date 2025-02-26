@@ -297,8 +297,7 @@ def process_blast_results(species, df, query_file, reference_df, difference_numb
     df[13] = df[1].map(reference_sequences)
     #print(df)
 
-    filtered_df = df[(df.iloc[:, 8] <= difference_from_start) | (df.iloc[:, 6] <= 10) | (df.iloc[:, 7] <= 10) | 
-                     (df.iloc[:, 6] >= df.loc[:, "contig_length"]-10) | (df.iloc[:, 7] >= df.loc[:, "contig_length"]-10)]
+    filtered_df = df[(df.iloc[:, 8] <= difference_from_start)]
 
     filtered_df2 = filtered_df[((filtered_df.iloc[:, 2] >= identity_threshold) & 
                                 (filtered_df.loc[:, 'total_coverage'] >= coverage_threshold)) | 
@@ -580,6 +579,5 @@ def process_blast_results(species, df, query_file, reference_df, difference_numb
     different_proteins2 = different_proteins2.apply(lambda x: x.fillna(0).astype(int).astype(str) if x.name not in column_to_exclude and x.dtype != 'object' else x)
 
     return different_proteins2
-
 
 

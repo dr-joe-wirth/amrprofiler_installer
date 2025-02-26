@@ -162,11 +162,7 @@ def process_blast_results(protein_annotation_file, assembly_blast_results, file_
     df[[2, 6,7,8,10,11]] = df[[2, 6,7,8,10,11]].astype(float)
     df['partial_coverage'] = df['partial_coverage'].astype(float)
     
-    filtered_df = df[(df.iloc[:, 8] <= protein_start_filter) | 
-                     (df.iloc[:, 6] <= 10) | 
-                     (df.iloc[:, 7] <= 10) | 
-                     (df.iloc[:, 6] >= df.loc[:, "contig_length"]-10) | 
-                     (df.iloc[:, 7] >= df.loc[:, "contig_length"]-10)]
+    filtered_df = df[(df.iloc[:, 8] <= protein_start_filter)]
 
     filtered_df2 = filtered_df[((filtered_df.iloc[:, 2] >= identity_threshold) & 
                                 (filtered_df.loc[:, 'partial_coverage'] >= coverage_threshold)) | 
@@ -265,8 +261,8 @@ def process_blast_results(protein_annotation_file, assembly_blast_results, file_
     df1 = df1.drop_duplicates(subset=[0,12], keep='first')
 
     df1['Comments'] = 'Complete gene based on threshold'
-    df1.loc[((df1[6] == 1) | (df1[7] == 1)), 'Comments'] = 'Partial gene in the start of Contig'
-    df1.loc[((df1[6] == df1['contig_length']) | (df1[7] == df1['contig_length'])), 'Comments'] = 'Partial gene in the end of Contig'
+    df1.loc[(((df1[6] <= 10) & (df1.loc[:, 'partial_coverage'] < coverage_threshold))| ((df1[7] <= 10) & (df1.loc[:, 'partial_coverage'] < coverage_threshold))), 'Comments'] = 'Partial gene in the start of Contig'
+    df1.loc[(((df1[6] >= df1['contig_length'] -10) & (df1.loc[:, 'partial_coverage'] < coverage_threshold))| ((df1[7] >= df1['contig_length'] -10) & (df1.loc[:, 'partial_coverage'] < coverage_threshold))), 'Comments'] = 'Partial gene in the end of Contig'
     df1['GeneImportance'] = "Major"
     
     new_names = {

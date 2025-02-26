@@ -205,18 +205,18 @@ def run_blastn_for_references(query_file, reference_df, db_path, num_threads=5):
             all_results_df = pd.concat([all_results_df, result_df], ignore_index=True)
     
     # Step 1: Create a new column 'ID' by removing 'lcl|' from the second column (index 1)
-    all_results_df.iloc[:, 1] = all_results_df.iloc[:, 1].str.replace(r'lcl|', '') #for python 3.9.5 
-    #all_results_df.iloc[:, 1] = all_results_df.iloc[:, 1].str.replace(r'lcl\|', '') #for python 3.9.12
-    
+    all_results_df.iloc[:, 1] = all_results_df.iloc[:, 1].str.replace(r'lcl|', '')
     
     reference_sequences = extract_sequences_to_dict(genome_ref_path)
-    
+    print(rna_dict)
     # Step 2: Create a new column 'rRNA_gene' based on the 'ID' column using `rna_dict`
     all_results_df['rRNA_gene'] = all_results_df.iloc[:, 1].map(rna_dict)
     
     all_results_df[13] = all_results_df[1].map(reference_sequences)
 
-
+    print("all_resuls")
+    print(all_results_df.iloc[:, 1])
+    print(all_results_df)
     return all_results_df
     
 
@@ -241,7 +241,8 @@ def find_rRNA_differences(species,df4, blast_results, query_file, db_path, diffe
 							((filtered_df.iloc[:, 7] >= filtered_df.loc[:, "contig_length"]-200) & 
 								(filtered_df.iloc[:, 2] >= identity_threshold))]
 	filtered_df2 = filtered_df2.reset_index(drop=True)
-	
+	#print("First time")
+	#print(filtered_df2)
 	# Assuming df4.iloc[:, 2] contains the single string as a list
 	rna_list_string = df4.iloc[:, 2].tolist()[0]
 
@@ -364,6 +365,7 @@ def find_rRNA_differences(species,df4, blast_results, query_file, db_path, diffe
 	rRNA_df = pd.DataFrame(rRNA_dict)
 
 	# Display the DataFrame
+	#print("rRNA_df")
 	#print(rRNA_df)
 
 	for file in files:
@@ -373,7 +375,7 @@ def find_rRNA_differences(species,df4, blast_results, query_file, db_path, diffe
 		# Filter 'all_results_df' to get only rows where 'rRNA_gene' matches the current 'file' name
 		filtered_df2.iloc[:, 1] = filtered_df2.iloc[:, 1].str.replace('lcl\|', '', regex=True)
 		filtered_df = filtered_df2[filtered_df2.iloc[:, 16] == rRNA_gene_value]
-		#print(filtered_df)
+		
 		# Save the filtered DataFrame in the dictionary with the key being the 'file' name
 		try:
 			blastn_data[filtered_df['rRNA_gene'].iloc[0]] = filtered_df
@@ -381,6 +383,8 @@ def find_rRNA_differences(species,df4, blast_results, query_file, db_path, diffe
 			# Skip adding the entry to the dictionary if there are no hits for the current rRNA gene
 			pass
 
+	#print("filtered_df2")
+	#print(filtered_df2.iloc[:, 16])
 	# Initialize an empty dictionary to store the valid hits for each contig
 	valid_hits = {}
 
@@ -410,6 +414,8 @@ def find_rRNA_differences(species,df4, blast_results, query_file, db_path, diffe
 			if not overlaps:
 				valid_hits[contig].append(row)
 
+	#print("valid_hits")
+	#print(valid_hits)
 	# Create a new DataFrame to store the valid hits
 	data = pd.DataFrame(columns=['contig', 'gene', 'bitscore', 'length', 'sequence', 'start', 'end', 'reference_sequence', 'ref_start', 'ref_end', 'identity', 'alignment_pct', 'e-value', 'gaps', 'mismatches', 'Reference_genome'])
 
@@ -445,6 +451,7 @@ def find_rRNA_differences(species,df4, blast_results, query_file, db_path, diffe
 	final_seqs = ''
 	for index, row in data.iterrows():
 		final_seqs = str(final_seqs) + str(row['sequence'])
+	#print("Print data")
 	#print(data)
 	# Function to align sequences and find differences
 	# Function to align sequences and find differences
@@ -453,11 +460,11 @@ def find_rRNA_differences(species,df4, blast_results, query_file, db_path, diffe
 		sequence = row['sequence']
 		
 
-		if (row[9] < row[8] and row[6] > row[5]):
+		if (row.iloc[9] < row.iloc[8] and row.iloc[6] > row.iloc[5]):
 					# Reverse complement the sequence using Bio.Seq
 			reference_sequence = str(Seq(reference_sequence).reverse_complement())
 
-		if (row[9] > row[8] and row[6] < row[5]):
+		if (row.iloc[9] > row.iloc[8] and row.iloc[6] < row.iloc[5]):
 			sequence = str(Seq(sequence).reverse_complement())
 
 		aligner = Align.PairwiseAligner()
@@ -711,7 +718,7 @@ def find_rRNA_differences(species,df4, blast_results, query_file, db_path, diffe
 				"bitscore" : "BitScore",
 				"sequence" : "rRNA Copy Sequence                                                                                                                                                                                                                                                                                                                                                                                                         .",
     			"reference_sequence" : "rRNA Copy Reference Sequence                                                                                                                                                                                                                                                                                                                                                                                                         .",
-				"reference_sequence_length" : "length",
+				"length" : "Reference rRNA gene length",
 				"gaps" : "Gaps" , "mismatches" : "Mismatches"}, inplace=True) 
     			
     			# Specify the column you want to keep in its original data type

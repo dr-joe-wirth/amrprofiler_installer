@@ -121,10 +121,7 @@ If you have used **ResFinder + Reference Gene Catalog** as reference databases, 
 
 - **AMRProfiler**: *[To Be Specified]*  
 - **ResFinder**:  
-  - Bortolaia V, Kaas RS, Ruppe E, Roberts MC, Schwarz S, Cattoir V, Philippon A, Allesoe RL, Rebelo AR, Florensa AR, Fagelhauer L, Chakraborty T, Neumann B, Werner G, Bender JK, Stingl K, Nguyen M, Coppens J, Xavier BB, Malhotra-Kumar S, Westh H, Pinholt M, Anjum MF, Duggett NA, Kempf I, Nykäsenoja S, Olkkola S, Wieczorek K, Amaro A, Clemente L, Mossong J, Losch S, Ragimbeau C, Lund O, Aarestrup FM. (2020).  
-    **ResFinder 4.0 for predictions of phenotypes from genotypes.** *Journal of Antimicrobial Chemotherapy, 75(12), 3491-3500.*  
-  - Clausen PTLC, Aarestrup FM, Lund O. (2018).  
-    **Rapid and precise alignment of raw reads against redundant databases with KMA.** *BMC Bioinformatics, 19(1):307.*  
+  - Zankari E, Hasman H, Cosentino S, et al. **Identification of acquired antimicrobial resistance genes.** J Antimicrob Chemother. 2012;67(11):2640-2644. doi:10.1093/jac/dks261
 - **AMRFinderPlus**:  
   - Feldgarden M, Brover V, Gonzalez-Escalona N, Frye JG, Haendiges J, Haft DH, Hoffmann M, Pettengill JB, Prasad AB, Tillman GE, Tyson GH, Klimke W. (2019).  
     **AMRFinderPlus and the Reference Gene Catalog facilitate examination of the genomic links among antimicrobial resistance, stress response, and virulence.** *Antimicrobial Agents and Chemotherapy, 63(7):e00483-19.*  
@@ -142,10 +139,7 @@ If you have used **ResFinder + Reference Gene Catalog + CARD** or **Tool 2 and/o
   - Alcock BP, Raphenya AR, Lau TTY, Tsang KK, Bouchard M, Edalatmand A, Huynh W, Nguyen AL, Cheng AA, Liu S, Min SY, Miroshnichenko A, Tran HK, Werfalli RE, Nasir JA, Oloni M, Speicher DJ, Florescu A, Singh B, Faltyn M, Hernandez KA, Sharma AN, Bordeleau E, Pawlowski AC, Zubyk HL, Dooley D, Griffiths E, Maguire F, Winsor GL, Beiko RG, Brinkman FSL, Hsiao WWL, Domselaar GV, McArthur AG. (2023).  
     **CARD 2023: Expanded Curation, Support for Machine Learning, and Resistome Prediction at the Comprehensive Antibiotic Resistance Database.** *Nucleic Acids Research, 51, D690-D699.*  
 - **ResFinder**:  
-  - Bortolaia V, Kaas RS, Ruppe E, Roberts MC, Schwarz S, Cattoir V, Philippon A, Allesoe RL, Rebelo AR, Florensa AR, Fagelhauer L, Chakraborty T, Neumann B, Werner G, Bender JK, Stingl K, Nguyen M, Coppens J, Xavier BB, Malhotra-Kumar S, Westh H, Pinholt M, Anjum MF, Duggett NA, Kempf I, Nykäsenoja S, Olkkola S, Wieczorek K, Amaro A, Clemente L, Mossong J, Losch S, Ragimbeau C, Lund O, Aarestrup FM. (2020).  
-    **ResFinder 4.0 for predictions of phenotypes from genotypes.** *Journal of Antimicrobial Chemotherapy, 75(12), 3491-3500.*  
-  - Clausen PTLC, Aarestrup FM, Lund O. (2018).  
-    **Rapid and precise alignment of raw reads against redundant databases with KMA.** *BMC Bioinformatics, 19(1):307.*  
+  - Zankari E, Hasman H, Cosentino S, et al. **Identification of acquired antimicrobial resistance genes.** J Antimicrob Chemother. 2012;67(11):2640-2644. doi:10.1093/jac/dks261
 - **AMRFinderPlus**:  
   - Feldgarden M, Brover V, Gonzalez-Escalona N, Frye JG, Haendiges J, Haft DH, Hoffmann M, Pettengill JB, Prasad AB, Tillman GE, Tyson GH, Klimke W. (2019).  
     **AMRFinderPlus and the Reference Gene Catalog facilitate examination of the genomic links among antimicrobial resistance, stress response, and virulence.** *Antimicrobial Agents and Chemotherapy, 63(7):e00483-19.*  

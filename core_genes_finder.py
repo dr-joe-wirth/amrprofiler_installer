@@ -108,7 +108,8 @@ def run_blastx_for_references(query_file, reference_df, db_path_folder, num_thre
             max_target_seqs=100,           # Maximum number of target sequences to report
             evalue=1e-10,                 # Reduced gap extend penalty
             num_threads=num_threads,       # Number of threads for parallel processing
-            soft_masking=True,             # Enable soft masking for low-complexity regions
+            soft_masking=True,    
+            comp_based_stats=0                       # Enable soft masking for low-complexity regions
         )
         
         # Run the BLASTX command and capture the output
@@ -277,7 +278,7 @@ def process_blast_results(species, df, query_file, reference_df, difference_numb
     """
     # Extract the reference genome name from the reference DataFrame
     reference_genome_name = db_path_folder+"genomes_all/filtered_"+reference_df.iloc[0, 1]+"_translated_cds.faa"  # Assumes the second column has the reference genome name
-    print(reference_genome_name)
+    #print(reference_genome_name)
     # Read sequences from FASTA files
     sequences_dict = read_fasta(query_file)
     genes_dict = parse_fasta_to_dict(reference_genome_name)
@@ -579,5 +580,3 @@ def process_blast_results(species, df, query_file, reference_df, difference_numb
     different_proteins2 = different_proteins2.apply(lambda x: x.fillna(0).astype(int).astype(str) if x.name not in column_to_exclude and x.dtype != 'object' else x)
 
     return different_proteins2
-
-

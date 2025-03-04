@@ -1,30 +1,29 @@
-LICENSE (MIT with Additional Clause)
 MIT License
 
-Copyright (c) [2025] [University of Thessaly]
+Copyright (c) [2025] dianalabgr
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
+Permission is hereby granted, free of charge, to any person obtaining a copy  
+of this software and associated documentation files (the "Software"), to deal  
+in the Software without restriction, including without limitation the rights  
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell  
+copies of the Software, and to permit persons to whom the Software is  
 furnished to do so, subject to the following conditions:
 
-    The above copyright notice and this permission notice shall be included in all
-    copies or substantial portions of the Software.
+1. The above copyright notice and this permission notice shall be included in all  
+   copies or substantial portions of the Software.
 
-    Third-Party Databases Notice
-    This software integrates with external antimicrobial resistance (AMR) databases, including but not limited to:
-        CARD (Comprehensive Antibiotic Resistance Database) – Available for non-commercial academic research under its terms of use (https://card.mcmaster.ca/about). Users are responsible for ensuring compliance with these terms.
-        Reference Gene Catalog (NCBI) – Public domain, freely available for unrestricted use.
-        ResFinder & PointFinder – Licensed under the Apache License 2.0, allowing free use, modification, and distribution.
+2. **Third-Party Databases Notice**  
+   This software integrates with external antimicrobial resistance (AMR) databases, including but not limited to:  
+   - **CARD (Comprehensive Antibiotic Resistance Database)** – Available for **non-commercial academic research** under its terms of use ([CARD Terms](https://card.mcmaster.ca/about)). Users are responsible for ensuring compliance with these terms.  
+   - **Reference Gene Catalog (NCBI)** – **Public domain**, freely available for unrestricted use.  
+   - **ResFinder & PointFinder** – Licensed under the **Apache License 2.0**, allowing free use, modification, and distribution.  
 
-    Users of this software must obtain appropriate permissions if redistributing or using CARD-derived data in commercial settings. The authors of this software do not provide any rights or licenses for third-party databases.
+   Users of this software **must obtain appropriate permissions** if redistributing or using **CARD-derived data** in **commercial settings**. The authors of this software **do not provide** any rights or licenses for third-party databases.
 
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL
-    THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING
-    FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-    DEALINGS IN THE SOFTWARE.
+3. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR  
+   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,  
+   FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. IN NO EVENT SHALL  
+   THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER  
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE, ARISING  
+   FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER  
+   DEALINGS IN THE SOFTWARE.

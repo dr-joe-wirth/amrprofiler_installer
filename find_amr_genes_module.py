@@ -46,7 +46,8 @@ def run_blastx_to_dataframe(query_file, db_path, num_threads=5):
         num_alignments =10000,
         evalue=1e-10,  # Set the e-value threshold
         num_threads=num_threads,
-        soft_masking=True, 
+        soft_masking=True,    
+        comp_based_stats=0
     )
     
     stdout, stderr = blastx_cline()
@@ -178,7 +179,7 @@ def process_blast_results(protein_annotation_file, assembly_blast_results, file_
 
     filtered_df2[[2, 10,11]] = filtered_df2[[2, 10,11]].astype(float)
     filtered_df2['partial_coverage'] = filtered_df2['partial_coverage'].astype(float)
-
+    #print(filtered_df2)
     df1 = pd.DataFrame()
     for index, row in filtered_df2.iterrows():
         inner_break = False
@@ -259,7 +260,7 @@ def process_blast_results(protein_annotation_file, assembly_blast_results, file_
 
     # Drop duplicates based on the column you want to deduplicate (e.g., column 12), keeping the first (highest) occurrence
     df1 = df1.drop_duplicates(subset=[0,12], keep='first')
-
+    #print(df1)
     df1['Comments'] = 'Complete gene based on threshold'
     df1.loc[(((df1[6] <= 10) & (df1.loc[:, 'partial_coverage'] < coverage_threshold))| ((df1[7] <= 10) & (df1.loc[:, 'partial_coverage'] < coverage_threshold))), 'Comments'] = 'Partial gene in the start of Contig'
     df1.loc[(((df1[6] >= df1['contig_length'] -10) & (df1.loc[:, 'partial_coverage'] < coverage_threshold))| ((df1[7] >= df1['contig_length'] -10) & (df1.loc[:, 'partial_coverage'] < coverage_threshold))), 'Comments'] = 'Partial gene in the end of Contig'
@@ -298,6 +299,7 @@ def process_blast_results(protein_annotation_file, assembly_blast_results, file_
                 df1.loc[index, new_column_name] = row_extra[column].values[0]
     
     df1.loc[df1.loc[:, "Database"] == "Card Database", 'GeneImportance'] = "Minor"
+    print(df1)
     #print(df1.loc[:, "Database"])
     df3 = df1.sort_values(by='GeneImportance')
     
@@ -331,7 +333,10 @@ def process_blast_results(protein_annotation_file, assembly_blast_results, file_
 
 
     # Convert all columns to strings without decimals, except the specified columns
-    df4 = df4.apply(lambda x: x.astype(int).astype(str) if x.name not in column_to_exclude and x.dtype != 'object' else x)
+    df4 = df4.apply(lambda x: x.fillna(0).replace([float('inf'), -float('inf')], '-').astype(int).astype(str) 
+                if x.name not in column_to_exclude and x.dtype != 'object' 
+                else x)
+    #df4 = df4.apply(lambda x: x.astype(int).astype(str) if x.name not in column_to_exclude and x.dtype != 'object' else x)
 
 
     #df3.to_csv(file_output, index=False)

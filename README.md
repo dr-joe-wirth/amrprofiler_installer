@@ -159,9 +159,10 @@ If you have used **ResFinder + Reference Gene Catalog + CARD** or **Tool 2 and/o
 
 - Python 3.9.5
 - BLAST+ : 2.9.0+
-- Pandas : 
-- Biopython : 1.9
+- Biopython : 1.84
+- All the installed packages are available in the installed_packages.txt
 
+  
 ## License and Third-Party Database Usage
 
 This software is licensed under the **MIT License**. You are free to use, modify, and distribute this software under the terms of the license. See the [LICENSE](LICENSE) file for full details.

@@ -1,6 +1,7 @@
 # AmrProfiler
 
 **AmrProfiler** is a bioinformatics tool designed to identify antimicrobial resistance (AMR) genes, detect point mutations in core genes, and analyze mutations in rRNA genes across 18,000 bacterial species.
+AmrProfiler webserver is available at https://dianalab.e-ce.uth.gr/amrprofiler
 
 ![Screenshot from 2025-02-25 15-16-37](https://github.com/user-attachments/assets/a4cbfbd8-92fb-4057-896d-34e34dd22c7e)
 
@@ -132,13 +133,18 @@ If you have used **ResFinder+ReferenceGeneCatalog+CARD** or **Tool 2 and/or Tool
 - Pandas
 - Biopython
 
-## License
+## License and Third-Party Database Usage
 
-This project is licensed under the MIT License, which permits free use, modification, and distribution, as long as the original copyright and license notice are included. It comes with no warranty or liability.
+This software is licensed under the **MIT License**. You are free to use, modify, and distribute this software under the terms of the license. See the [LICENSE](LICENSE) file for full details.
 
-This project is licensed under the MIT License.
+### Third-Party Databases Notice
+This software integrates with external antimicrobial resistance (AMR) databases, including but not limited to:
 
----
+- **CARD (Comprehensive Antibiotic Resistance Database)** – Available for **non-commercial academic research** under its terms of use ([CARD Terms](https://card.mcmaster.ca/about)). Users are responsible for ensuring compliance with these terms.
+- **Reference Gene Catalog (NCBI)** – **Public domain**, freely available for unrestricted use.
+- **ResFinder & PointFinder** – Licensed under the **Apache License 2.0**, allowing free use, modification, and distribution.
 
-This README provides a structured and clearer explanation of how to use AmrProfiler. Let me know if you need any refinements!
+Users must **obtain appropriate permissions** if redistributing or using **CARD-derived data** in **commercial settings**. The authors of this software **do not provide any rights or licenses** for third-party databases.
+
+For more details, refer to the [LICENSE](LICENSE) file.
 

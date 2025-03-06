@@ -18,7 +18,7 @@ To run AmrProfiler locally, you must first download the required databases and f
 To run AmrProfiler with default parameters, execute:
 
 ```sh
-python /home/argis/Desktop/pasteur/amr_server/AmrProfiler_new/amrprofiler.py "Lar4933_contigs.fasta" "Staphylococcus aureus"
+python /home/argis/Desktop/pasteur/amr_server/amrprofiler-main/amrprofiler.py "Lar4933_contigs.fasta" "Staphylococcus aureus"
 ```
 
 ### Run each AmrProfiler's modules separately in python

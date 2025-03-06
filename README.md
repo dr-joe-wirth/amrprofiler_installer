@@ -32,7 +32,7 @@ import sys
 import importlib.util
 
 # Load module
-module_path = '/home/argis/Desktop/pasteur/amr_server/AmrProfiler_new/find_amr_genes_module.py'
+module_path = '/home/argis/Desktop/pasteur/amr_server/amrprofiler-main/find_amr_genes_module.py'
 spec = importlib.util.spec_from_file_location("find_amr_genes_module", module_path)
 find_amr_genes_module = importlib.util.module_from_spec(spec)
 sys.modules["find_amr_genes_module"] = find_amr_genes_module
@@ -41,9 +41,9 @@ spec.loader.exec_module(find_amr_genes_module)
 # Parameters
 query_file = "21.fasta"
 Database_of_Genes = "Resfinder+ReferenceGeneCatalog"
-db_path = "/home/argis/Desktop/pasteur/amr_server/AmrProfiler_new/databases/all/amrFinder_ResFinder" if Database_of_Genes == "Resfinder+ReferenceGeneCatalog" else "/home/argis/Desktop/pasteur/amr_server/AmrProfiler_new/databases/all/all_amr"
+db_path = "/home/argis/Desktop/pasteur/amr_server/amrprofiler-main/databases/all/amrFinder_ResFinder" if Database_of_Genes == "Resfinder+ReferenceGeneCatalog" else "/home/argis/Desktop/pasteur/amr_server/AmrProfiler_new/databases/all/all_amr"
 num_threads = 4
-protein_annotation_file = "/home/argis/Desktop/pasteur/amr_server/AmrProfiler_new/databases/genes_annotation_databases.csv"
+protein_annotation_file = "/home/argis/Desktop/pasteur/amr_server/amrprofiler-main/databases/genes_annotation_databases.csv"
 protein_start_filter = 50
 identity_threshold = 70
 coverage_threshold = 70
@@ -63,7 +63,7 @@ This tool detects point mutations in core genes for a given bacterial species.
 
 ```python
 # Load module
-module_path = '/home/argis/Desktop/pasteur/amr_server/AmrProfiler/core_genes_finder.py'
+module_path = '/home/argis/Desktop/pasteur/amr_server/amrprofiler-main/core_genes_finder.py'
 spec = importlib.util.spec_from_file_location("core_genes_finder", module_path)
 core_genes_finder = importlib.util.module_from_spec(spec)
 sys.modules["core_genes_finder"] = core_genes_finder
@@ -72,7 +72,7 @@ spec.loader.exec_module(core_genes_finder)
 # Parameters
 query_file = "21.fasta"
 species = "Pseudomonas aeruginosa"
-db_path_folder = "/home/argis/Desktop/pasteur/amr_server/AmrProfiler_new/refseq/"
+db_path_folder = "/home/argis/Desktop/pasteur/amr_server/amrprofiler-main/refseq/"
 threads = 4
 difference_number = 2
 difference_from_start = 20
@@ -95,7 +95,7 @@ This tool identifies mutations in rRNA genes for a given bacterial species.
 
 ```python
 # Load module
-module_path = '/home/argis/Desktop/pasteur/amr_server/AmrProfiler/rRNA_genes_finder_NEW.py'
+module_path = '/home/argis/Desktop/pasteur/amr_server/amrprofiler-main/rRNA_genes_finder_NEW.py'
 spec = importlib.util.spec_from_file_location("rRNA_genes_finder_NEW", module_path)
 rRNA_genes_finder_NEW = importlib.util.module_from_spec(spec)
 sys.modules["rRNA_genes_finder_NEW"] = rRNA_genes_finder_NEW
@@ -104,7 +104,7 @@ spec.loader.exec_module(rRNA_genes_finder_NEW)
 # Parameters
 query_file = "21.fasta"
 species = "Pseudomonas aeruginosa"
-db_path_folder = "/home/argis/Desktop/pasteur/amr_server/AmrProfiler_new/db/"
+db_path_folder = "/home/argis/Desktop/pasteur/amr_server/amrprofiler-main/db/"
 difference_number_rRNA = 5
 
 # Run analysis
@@ -125,7 +125,6 @@ If you have used **ResFinder + Reference Gene Catalog** as reference databases, 
 - **AMRFinderPlus**:  
   - Feldgarden M, Brover V, Gonzalez-Escalona N, Frye JG, Haendiges J, Haft DH, Hoffmann M, Pettengill JB, Prasad AB, Tillman GE, Tyson GH, Klimke W. (2019).  
     **AMRFinderPlus and the Reference Gene Catalog facilitate examination of the genomic links among antimicrobial resistance, stress response, and virulence.** *Antimicrobial Agents and Chemotherapy, 63(7):e00483-19.*  
-    [DOI: 10.1128/AAC.00483-19](https://doi.org/10.1128/AAC.00483-19)  
 - **BLAST+**:  
   - Camacho C, Coulouris G, Avagyan V, Ma N, Papadopoulos J, Bealer K, Madden TL. (2009).  
     **BLAST+: Architecture and Applications.** *BMC Bioinformatics, 10(1):421.*  
@@ -139,11 +138,11 @@ If you have used **ResFinder + Reference Gene Catalog + CARD** or **Tool 2 and/o
   - Alcock BP, Raphenya AR, Lau TTY, Tsang KK, Bouchard M, Edalatmand A, Huynh W, Nguyen AL, Cheng AA, Liu S, Min SY, Miroshnichenko A, Tran HK, Werfalli RE, Nasir JA, Oloni M, Speicher DJ, Florescu A, Singh B, Faltyn M, Hernandez KA, Sharma AN, Bordeleau E, Pawlowski AC, Zubyk HL, Dooley D, Griffiths E, Maguire F, Winsor GL, Beiko RG, Brinkman FSL, Hsiao WWL, Domselaar GV, McArthur AG. (2023).  
     **CARD 2023: Expanded Curation, Support for Machine Learning, and Resistome Prediction at the Comprehensive Antibiotic Resistance Database.** *Nucleic Acids Research, 51, D690-D699.*  
 - **ResFinder**:  
-  - Zankari E, Hasman H, Cosentino S, et al. **Identification of acquired antimicrobial resistance genes.** J Antimicrob Chemother. 2012;67(11):2640-2644. doi:10.1093/jac/dks261
+  - Zankari E, Hasman H, Cosentino S, et al.
+  - **Identification of acquired antimicrobial resistance genes.** J Antimicrob Chemother. 2012;67(11):2640-2644. doi:10.1093/jac/dks261
 - **AMRFinderPlus**:  
   - Feldgarden M, Brover V, Gonzalez-Escalona N, Frye JG, Haendiges J, Haft DH, Hoffmann M, Pettengill JB, Prasad AB, Tillman GE, Tyson GH, Klimke W. (2019).  
     **AMRFinderPlus and the Reference Gene Catalog facilitate examination of the genomic links among antimicrobial resistance, stress response, and virulence.** *Antimicrobial Agents and Chemotherapy, 63(7):e00483-19.*  
-    [DOI: 10.1128/AAC.00483-19](https://doi.org/10.1128/AAC.00483-19)  
 - **BLAST+**:  
   - Camacho C, Coulouris G, Avagyan V, Ma N, Papadopoulos J, Bealer K, Madden TL. (2009).  
     **BLAST+: Architecture and Applications.** *BMC Bioinformatics, 10(1):421.*  

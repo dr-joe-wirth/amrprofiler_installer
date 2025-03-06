@@ -53,8 +53,8 @@ blast_results_df = find_amr_genes_module.run_blastx_to_dataframe(query_file, db_
 final_results = find_amr_genes_module.process_blast_results(protein_annotation_file, blast_results_df, query_file, protein_start_filter, identity_threshold, coverage_threshold)
 
 # Save results
-blast_results_df.to_csv("blast_results.csv", index=False, float_format="%.6f")
-final_results.to_csv("final_results_tool1.csv", index=False, float_format="%.6f")
+blast_results_df.to_csv("blast_results.csv", sep="\t", index=False, float_format="%.6f")
+final_results.to_csv("final_results_tool1.csv", sep="\t", index=False, float_format="%.6f")
 ```
 
 ### Tool 2: Core Gene Mutation Analysis
@@ -83,10 +83,10 @@ coverage_threshold = 90
 df4 = core_genes_finder.get_species_row(species, db_path_folder)
 df4.to_csv("core_genes_of_this_species.csv", index=False, float_format="%.6f")
 blast_results_core = core_genes_finder.run_blastx_for_references(query_file, df4, db_path_folder)
-blast_results_core.to_csv("blast_results_core.csv", index=False, float_format="%.6f")
+blast_results_core.to_csv("blast_results_core.csv", sep="\t", index=False, float_format="%.6f")
 
 result_df = core_genes_finder.process_blast_results(species, blast_results_core, query_file, df4, difference_number, db_path_folder, difference_from_start, identity_threshold, coverage_threshold)
-result_df.to_csv("mutations_results.csv", index=False, float_format="%.6f")
+result_df.to_csv("mutations_results.csv", sep="\t", index=False, float_format="%.6f")
 ```
 
 ### Tool 3: rRNA Mutation Analysis
@@ -109,10 +109,10 @@ difference_number_rRNA = 5
 
 # Run analysis
 df5 = rRNA_genes_finder_NEW.get_species_row(species, db_path_folder)
-df5.to_csv("rRNA_genes_of_this_species.csv", index=False, float_format="%.6f")
+df5.to_csv("rRNA_genes_of_this_species.csv", sep="\t", index=False, float_format="%.6f")
 blast_results_rRNA = rRNA_genes_finder_NEW.run_blastn_for_references(query_file, df5, db_path_folder)
 rRNA_dif = rRNA_genes_finder_NEW.find_rRNA_differences(species, df5, blast_results_rRNA, query_file, df5, db_path_folder, difference_number_rRNA, 5)
-rRNA_dif.to_csv("mutations_rRNA_results.csv", index=False, float_format="%.6f")
+rRNA_dif.to_csv("mutations_rRNA_results.csv", sep="\t", index=False, float_format="%.6f")
 ```
 
 ## 📖 Citations

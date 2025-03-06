@@ -30,11 +30,11 @@ try:
     #blast_results_df.to_csv("blast_results_AMR.csv", index=False, float_format="%.6f")
     final_results = find_amr_genes_module.process_blast_results(protein_annotation_file, blast_results_df, query_file, 
                                                               protein_start_filter, identity_threshold, coverage_threshold)
-    final_results.to_csv("final_results_tool1.csv", index=False, float_format="%.6f")
+    final_results.to_csv("final_results_tool1.csv", sep="\t", index=False, float_format="%.6f")
 except Exception as e:
     print(f"Error in Tool 1: {str(e)}")
     final_results = pd.DataFrame({"Error": ["No acquired AMR genes Found!"]})
-    final_results.to_csv("AMR_genes.csv", index=False, float_format="%.6f")
+    final_results.to_csv("AMR_genes.csv", sep="\t", index=False, float_format="%.6f")
 
 
 
@@ -55,13 +55,13 @@ try:
     df4 = core_genes_finder.get_species_row(species, db_path_folder)  #(the second table that we will show to the user)
     if df4.empty:
         raise ValueError("Empty species data")
-    df4.to_csv("core_genes_of_this_species.csv", index=False, float_format="%.6f")
+    df4.to_csv("core_genes_of_this_species.csv", sep="\t", index=False, float_format="%.6f")
     blast_results_core = core_genes_finder.run_blastx_for_references(query_file, df4, db_path_folder)
-    blast_results_core.to_csv("blast_results_core.csv", index=False, float_format="%.6f")
+    blast_results_core.to_csv("blast_results_core.csv", sep="\t", index=False, float_format="%.6f")
 except Exception as e:
     print("Most probably the species that you provide is not included in the species list (CHECK FOR MISPELLING)")
     df4 = pd.DataFrame({"Error": ["Species not found or invalid"]})
-    df4.to_csv("core_genes_of_this_species.csv", index=False, float_format="%.6f")
+    df4.to_csv("core_genes_of_this_species.csv", sep="\t", index=False, float_format="%.6f")
     blast_results_core = pd.DataFrame()  # Empty DataFrame for downstream handling
 
 try:
@@ -70,10 +70,10 @@ try:
                                                       identity_threshold, coverage_threshold)
     if result_df.empty:
         raise ValueError("No mutations on core genes of the selected species")
-    result_df.to_csv("Core_mutations_results.csv", index=False, float_format="%.6f")
+    result_df.to_csv("Core_mutations_results.csv", sep="\t", index=False, float_format="%.6f")
 except Exception as e:
     result_df = pd.DataFrame({"Error": ["No matches Found, Probably Wrong Species Selected!"]})
-    result_df.to_csv("Core_mutations_results.csv", index=False, float_format="%.6f")
+    result_df.to_csv("Core_mutations_results.csv", sep="\t", index=False, float_format="%.6f")
 
 
 
@@ -92,13 +92,13 @@ try:
     df5 = rRNA_genes_finder_NEW.get_species_row(species, db_path_folder)  #(the second table that we will show to the user)
     if df5.empty:
         raise ValueError("Empty species data")
-    df5.to_csv("rRNA_genes_of_this_species.csv", index=False, float_format="%.6f")
+    df5.to_csv("rRNA_genes_of_this_species.csv", sep="\t", index=False, float_format="%.6f")
     blast_results_rRNA = rRNA_genes_finder_NEW.run_blastn_for_references(query_file, df5, db_path_folder)
-    blast_results_rRNA.to_csv("blast_results_rRNA.csv", index=False, float_format="%.6f")
+    blast_results_rRNA.to_csv("blast_results_rRNA.csv", sep="\t", index=False, float_format="%.6f")
 except Exception as e:
     print("Most probably the species that you provide is not included in the species list (CHECK FOR MISPELLING)")
     df5 = pd.DataFrame({"Error": ["Species not found or invalid"]})
-    df5.to_csv("rRNA_genes_of_this_species.csv", index=False, float_format="%.6f")
+    df5.to_csv("rRNA_genes_of_this_species.csv", sep="\t", index=False, float_format="%.6f")
     blast_results_rRNA = pd.DataFrame()  # Empty DataFrame for downstream handling
 
 try:
@@ -106,11 +106,11 @@ try:
                                                           db_path_folder, difference_number_rRNA, 5)
     if rRNA_dif.empty:
         raise ValueError("No rRNA genes of the selected species found")
-    rRNA_dif.to_csv("rRNA_mutations_results.csv", index=False, float_format="%.6f")
+    rRNA_dif.to_csv("rRNA_mutations_results.csv", sep="\t", index=False, float_format="%.6f")
 except Exception as e:
     print(f"Error in Tool 3: {str(e)}")
     rRNA_dif = pd.DataFrame({"Error": ["No matches Found, Probably Wrong Species Selected!"]})
-    rRNA_dif.to_csv("rRNA_mutations_results.csv", index=False, float_format="%.6f")
+    rRNA_dif.to_csv("rRNA_mutations_results.csv", sep="\t", index=False, float_format="%.6f")
 
 
 

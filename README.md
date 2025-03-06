@@ -158,7 +158,7 @@ If you have used **ResFinder + Reference Gene Catalog + CARD** or **Tool 2 and/o
   
 ## License and Third-Party Database Usage
 
-This software is licensed under the **MIT License**. You are free to use, modify, and distribute this software under the terms of the license. See the [LICENSE](LICENSE) file for full details.
+This software is licensed under the **MIT License**. You are free to use, modify, and distribute this software under the terms of the license. See the [LICENSE](Licence) file for full details.
 
 ### Third-Party Databases Notice
 This software integrates with external antimicrobial resistance (AMR) databases, including but not limited to:
@@ -169,5 +169,5 @@ This software integrates with external antimicrobial resistance (AMR) databases,
 
 Users must **obtain appropriate permissions** if redistributing or using **CARD-derived data** in **commercial settings**. The authors of this software **do not provide any rights or licenses** for third-party databases.
 
-For more details, refer to the [LICENSE](LICENSE) file.
+For more details, refer to the [LICENSE](Licence) file.
 

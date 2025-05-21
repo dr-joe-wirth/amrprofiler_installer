@@ -9,7 +9,7 @@ AmrProfiler webserver is available at https://dianalab.e-ce.uth.gr/amrprofiler
 
 ## Installation & Setup
 
-To run AmrProfiler locally, you must first download the required databases and files from Zenodo (https://zenodo.org/uploads/14924034). Extract the downloaded folders inside the `amrprofiler` directory from this repo.
+To run AmrProfiler locally, you must first download the required databases and files from Zenodo (https://zenodo.org/records/15286462). Extract the downloaded folders inside the `amrprofiler` directory from this repo.
 
 ## Running AmrProfiler
 

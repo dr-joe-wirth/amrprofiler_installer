@@ -453,6 +453,24 @@ def find_rRNA_differences(species,df4, blast_results, query_file, db_path, diffe
 		final_seqs = str(final_seqs) + str(row['sequence'])
 	#print("Print data")
 	#print(data)
+	
+	# Function to correct the strand of the sequence based on the reference sequence 
+	
+	def reorient_sequences(row):
+		sequence = row.iloc[4]
+
+		if row.iloc[8] > row.iloc[9]:  # reference is on reverse strand
+		    sequence = str(Seq(sequence).reverse_complement())
+		    strand = "negative"
+		else:
+		    strand = "positive"
+
+		row.iloc[4] = sequence
+		row['strand'] = strand
+	return row
+
+	data = data.apply(reorient_sequences, axis=1)
+
 	# Function to align sequences and find differences
 	# Function to align sequences and find differences
 	def find_sequence_differences(row):

@@ -95,7 +95,7 @@ df5=rRNA_genes_finder_NEW.get_species_row(species,db_path_folder)  #(the second 
 df5.to_csv("rRNA_genes_of_this_species.csv", index=False, float_format="%.6f")
 
 blast_results_rRNA=rRNA_genes_finder_NEW.run_blastn_for_references(query_file, df5,db_path_folder)
-rRNA_dif = rRNA_genes_finder_NEW.find_rRNA_differences(species,df5, blast_results_rRNA, query_file, df5, db_path_folder, difference_number_rRNA,5)
+rRNA_dif = rRNA_genes_finder_NEW.find_rRNA_differences(species,df5, blast_results_rRNA, query_file, db_path_folder, difference_number_rRNA,5)
 rRNA_dif.to_csv("mutations_rRNA_results.csv", index=False, float_format="%.6f")
 
 #To run automatically with default parameters 

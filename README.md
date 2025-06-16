@@ -17,9 +17,10 @@ To run AmrProfiler locally, you must first download the required databases and f
 
 To run AmrProfiler with default parameters, use **Python v3.9.5** and execute the following command. 
 Newer versions require modifications to handle _str.replace_ with the letters "lcl|" differently. 
+To run amrprofiler.py, you need the name of the strain, the selected species and also the folder saved the amrprofiler databases and scripts. The results will be saved in the running folder. 
 
 ```sh
-python /home/argis/Desktop/pasteur/amr_server/amrprofiler-main/amrprofiler.py "Lar4933_contigs.fasta" "Staphylococcus aureus"
+python /home/argis/Desktop/pasteur/amr_server/amrprofiler-main/amrprofiler.py "Lar4933_contigs.fasta" "Staphylococcus aureus" /home/argis/Desktop/pasteur/amr_server/amrprofiler-main/
 ```
 
 ### Run each AmrProfiler's modules separately in python

@@ -41,7 +41,7 @@ sys.modules["find_amr_genes_module"] = find_amr_genes_module
 spec.loader.exec_module(find_amr_genes_module)
 
 # Parameters
-query_file = "21.fasta"
+query_file = "Lar4933_contigs.fasta"
 Database_of_Genes = "Resfinder+ReferenceGeneCatalog"
 db_path = "/home/argis/Desktop/pasteur/amr_server/amrprofiler-main/databases/all/amrFinder_ResFinder" if Database_of_Genes == "Resfinder+ReferenceGeneCatalog" else "/home/argis/Desktop/pasteur/amr_server/amrprofiler-main/databases/all/all_amr"
 num_threads = 4
@@ -72,8 +72,8 @@ sys.modules["core_genes_finder"] = core_genes_finder
 spec.loader.exec_module(core_genes_finder)
 
 # Parameters
-query_file = "21.fasta"
-species = "Pseudomonas aeruginosa"
+query_file = "Lar4933_contigs.fasta"
+species = "Staphylococcus aureus"
 db_path_folder = "/home/argis/Desktop/pasteur/amr_server/amrprofiler-main/refseq/"
 threads = 4
 difference_number = 2
@@ -104,8 +104,8 @@ sys.modules["rRNA_genes_finder_NEW"] = rRNA_genes_finder_NEW
 spec.loader.exec_module(rRNA_genes_finder_NEW)
 
 # Parameters
-query_file = "21.fasta"
-species = "Pseudomonas aeruginosa"
+query_file = "Lar4933_contigs.fasta"
+species = "Staphylococcus aureus"
 db_path_folder = "/home/argis/Desktop/pasteur/amr_server/amrprofiler-main/db/"
 difference_number_rRNA = 5
 

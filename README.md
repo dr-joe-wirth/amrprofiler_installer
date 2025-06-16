@@ -43,7 +43,7 @@ spec.loader.exec_module(find_amr_genes_module)
 # Parameters
 query_file = "21.fasta"
 Database_of_Genes = "Resfinder+ReferenceGeneCatalog"
-db_path = "/home/argis/Desktop/pasteur/amr_server/amrprofiler-main/databases/all/amrFinder_ResFinder" if Database_of_Genes == "Resfinder+ReferenceGeneCatalog" else "/home/argis/Desktop/pasteur/amr_server/AmrProfiler_new/databases/all/all_amr"
+db_path = "/home/argis/Desktop/pasteur/amr_server/amrprofiler-main/databases/all/amrFinder_ResFinder" if Database_of_Genes == "Resfinder+ReferenceGeneCatalog" else "/home/argis/Desktop/pasteur/amr_server/amrprofiler-main/databases/all/all_amr"
 num_threads = 4
 protein_annotation_file = "/home/argis/Desktop/pasteur/amr_server/amrprofiler-main/databases/genes_annotation_databases.csv"
 protein_start_filter = 50

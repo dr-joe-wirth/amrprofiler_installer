@@ -1,6 +1,6 @@
 For finding the species for the tool are 
 cat refseq/genomes_assemblies_CoreGenes_final.txt | awk -F"\t" '{print $1}' | sort > refseq/genomes_assemblies_CoreGenes_final_species.txt 
-cat db/genomes_assemblies_rRNA.txt | awk -F"\t" '{print $1}'| sort > db/genomes_assemblies_rRNA_species.txt
+cat db/genomes_assemblies_rRNA_final.txt | awk -F"\t" '{print $1}'| sort > db/genomes_assemblies_rRNA_species.txt
  comm -12 refseq/genomes_assemblies_CoreGenes_final_species.txt db/genomes_assemblies_rRNA_species.txt > available_species.txt
 
 In python 
@@ -26,8 +26,8 @@ Database_of_Genes = "Resfinder+ReferenceGeneCatalog" #auto einai pou tha dinei o
 if Database_of_Genes == "Resfinder+ReferenceGeneCatalog":
     db_path = "/home/argis/Desktop/pasteur/amr_server/AmrProfiler_new/databases/all/amrFinder_ResFinder"
 elif Database_of_Genes == "Resfinder+ReferenceGeneCatalog+Card":  # Replace with the correct alternative condition
-    db_path = "/home/argis/Desktop/pasteur/amr_server/AmrProfiler_new/databases/all/nr_all_amr"
-#db_path = "/home/argis/Desktop/pasteur/amr_server/AmrProfiler_new/databases/all/nr_all_amr"
+    db_path = "/home/argis/Desktop/pasteur/amr_server/AmrProfiler_new/databases/all/all_amr"
+#db_path = "/home/argis/Desktop/pasteur/amr_server/AmrProfiler_new/databases/all/all_amr"
 num_threads = 4
 protein_annotation_file="/home/argis/Desktop/pasteur/amr_server/AmrProfiler_new/databases/genes_annotation_databases.csv"
 protein_start_filter = 50 # Threshold for protein start position filter.
@@ -99,5 +99,4 @@ rRNA_dif = rRNA_genes_finder_NEW.find_rRNA_differences(species,df5, blast_result
 rRNA_dif.to_csv("mutations_rRNA_results.csv", index=False, float_format="%.6f")
 
 #To run automatically with default parameters 
-python /home/argis/Desktop/pasteur/amr_server/AmrProfiler_new/amrprofiler.py "Lar4933_contigs.fasta" "Staphylococcus aureus"
-
+python /home/argis/Desktop/pasteur/amr_server/AmrProfiler_new/amrprofiler.py "Lar4933_contigs.fasta" "Staphylococcus aureus" /home/argis/Desktop/pasteur/amr_server/AmrProfiler_new/

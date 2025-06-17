@@ -124,9 +124,10 @@ rRNA_dif.to_csv("mutations_rRNA_results.csv", sep="\t", index=False, float_forma
 If you have used **ResFinder + Reference Gene Catalog** as reference databases, please cite:
 
 - **AMRProfiler**:
-  - Skoulakis, A., Kostoula, V., Daniilidis, K., Gkountinoudis, C.-G., Petinaki, E., & Hatzigeorgiou, A. G. (2025). AmrProfiler: a comprehensive tool for identifying antimicrobial resistance genes and mutations across species. Nucleic Acids Res., gkaf400. doi: 10.1093/nar/gkaf400
+  - Skoulakis, A., Kostoula, V., Daniilidis, K., Gkountinoudis, C.-G., Petinaki, E., & Hatzigeorgiou, A. G. (2025).
+    **AmrProfiler: a comprehensive tool for identifying antimicrobial resistance genes and mutations across species.** *Nucleic Acids Res., gkaf400. doi: 10.1093/nar/gkaf400*
 - **ResFinder**:  
-  - Zankari E, Hasman H, Cosentino S, et al. **Identification of acquired antimicrobial resistance genes.** J Antimicrob Chemother. 2012;67(11):2640-2644. doi:10.1093/jac/dks261
+  Zankari E, Hasman H, Cosentino S, et al. **Identification of acquired antimicrobial resistance genes.** J Antimicrob Chemother. 2012;67(11):2640-2644. doi:10.1093/jac/dks261
 - **AMRFinderPlus**:  
   - Feldgarden M, Brover V, Gonzalez-Escalona N, Frye JG, Haendiges J, Haft DH, Hoffmann M, Pettengill JB, Prasad AB, Tillman GE, Tyson GH, Klimke W. (2019).  
     **AMRFinderPlus and the Reference Gene Catalog facilitate examination of the genomic links among antimicrobial resistance, stress response, and virulence.** *Antimicrobial Agents and Chemotherapy, 63(7):e00483-19.*  
@@ -139,13 +140,14 @@ If you have used **ResFinder + Reference Gene Catalog** as reference databases, 
 If you have used **ResFinder + Reference Gene Catalog + CARD** or **Tool 2 and/or Tool 3**, please cite:
 
 - **AMRProfiler**: 
-  - Skoulakis, A., Kostoula, V., Daniilidis, K., Gkountinoudis, C.-G., Petinaki, E., & Hatzigeorgiou, A. G. (2025). AmrProfiler: a comprehensive tool for identifying antimicrobial resistance genes and mutations across species. Nucleic Acids Res., gkaf400. doi: 10.1093/nar/gkaf400
+  - Skoulakis, A., Kostoula, V., Daniilidis, K., Gkountinoudis, C.-G., Petinaki, E., & Hatzigeorgiou, A. G. (2025).
+    **AmrProfiler: a comprehensive tool for identifying antimicrobial resistance genes and mutations across species.** *Nucleic Acids Res., gkaf400. doi: 10.1093/nar/gkaf400*
 - **CARD**:  
   - Alcock BP, Raphenya AR, Lau TTY, Tsang KK, Bouchard M, Edalatmand A, Huynh W, Nguyen AL, Cheng AA, Liu S, Min SY, Miroshnichenko A, Tran HK, Werfalli RE, Nasir JA, Oloni M, Speicher DJ, Florescu A, Singh B, Faltyn M, Hernandez KA, Sharma AN, Bordeleau E, Pawlowski AC, Zubyk HL, Dooley D, Griffiths E, Maguire F, Winsor GL, Beiko RG, Brinkman FSL, Hsiao WWL, Domselaar GV, McArthur AG. (2023).  
     **CARD 2023: Expanded Curation, Support for Machine Learning, and Resistome Prediction at the Comprehensive Antibiotic Resistance Database.** *Nucleic Acids Research, 51, D690-D699.*  
 - **ResFinder**:  
   - Zankari E, Hasman H, Cosentino S, et al.
-  - **Identification of acquired antimicrobial resistance genes.** J Antimicrob Chemother. 2012;67(11):2640-2644. doi:10.1093/jac/dks261
+    **Identification of acquired antimicrobial resistance genes.** J Antimicrob Chemother. 2012;67(11):2640-2644. doi:10.1093/jac/dks261
 - **AMRFinderPlus**:  
   - Feldgarden M, Brover V, Gonzalez-Escalona N, Frye JG, Haendiges J, Haft DH, Hoffmann M, Pettengill JB, Prasad AB, Tillman GE, Tyson GH, Klimke W. (2019).  
     **AMRFinderPlus and the Reference Gene Catalog facilitate examination of the genomic links among antimicrobial resistance, stress response, and virulence.** *Antimicrobial Agents and Chemotherapy, 63(7):e00483-19.*  

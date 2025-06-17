@@ -2,6 +2,7 @@
 
 **AmrProfiler** is a bioinformatics tool designed to identify antimicrobial resistance (AMR) genes, detect point mutations in core genes, and analyze mutations in rRNA genes across 18,000 bacterial species.
 AmrProfiler webserver is available at https://dianalab.e-ce.uth.gr/amrprofiler
+**AmrProfiler** relies on the RefSeq database (downloaded on 01/06/2025). It is implemented in Python 3.9.5 and uses the `NcbiblastxCommandline` utility from the Biopython library (v1.79), along with the BLAST+ suite (v2.9.0).
 
 ![Screenshot from 2025-02-25 15-16-37](https://github.com/user-attachments/assets/a4cbfbd8-92fb-4057-896d-34e34dd22c7e)
 

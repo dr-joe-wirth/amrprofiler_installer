@@ -1,0 +1,11 @@
+name: amrprofiler
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - blast
+  - pandas
+  - pip >= 25.0
+  - python =3.9.5
+  - pip:
+    - biopython

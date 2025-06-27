@@ -13,6 +13,15 @@ AmrProfiler relies on the RefSeq database (downloaded on 01/06/2025). It is impl
 
 To run AmrProfiler locally, you must first download the required databases and files from Zenodo (https://zenodo.org/records/15674467). Extract the downloaded folders inside the `amrprofiler` directory from this repo.
 
+After this, install the dependencies using `conda` and activate the newly created environment
+
+```bash
+conda env create -f ./amrprofiler-main/environment.yml
+conda activate amrprofiler
+```
+
+This is highly recommended as it will guarantee that `python v3.9.5` is installed properly.
+
 ## Running AmrProfiler
 
 ### Default Execution

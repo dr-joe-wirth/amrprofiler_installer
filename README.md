@@ -168,8 +168,9 @@ If you have used **ResFinder + Reference Gene Catalog + CARD** or **Tool 2 and/o
 ## Dependencies
 
 - Python 3.9.5
+- pandas 2.2+
 - BLAST+ : 2.9.0+
-- Biopython : 1.84
+- Biopython : 1.84+
 - All the installed packages are available in the installed_packages.txt
 
   
